@@ -1,0 +1,50 @@
+<h1>Register</h1>
+<div class="container">
+  <div class="column">
+    <div>
+      <label for="userName">userName</label>
+      <input type="text" name="userName" [(ngModel)]="user.userName" />
+    </div>
+    <div>
+      <label for="firstName">First name</label>
+      <input type="text" name="firstName" [(ngModel)]="user.firstName" />
+    </div>
+    <div>
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" [(ngModel)]="user.lastName" />
+    </div>
+    <div>
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="text" name="dateOfBirth" [(ngModel)]="user.dateOfBirth" />
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input type="text" name="email" [(ngModel)]="user.email" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" [(ngModel)]="user.password" />
+    </div>
+    <div>
+      <label for="address1">address1</label>
+      <input type="text" name="address1" [(ngModel)]="user.address1" />
+    </div>
+    <div>
+      <label for="address2">address2</label>
+      <input type="text" name="address2" [(ngModel)]="user.address2" />
+    </div>
+    <div>
+      <label for="address3">address3</label>
+      <input type="text" name="address3" [(ngModel)]="user.address3" />
+    </div>
+    <div>
+      <label for="pincode">pincode</label>
+      <input type="text" name="pincode" [(ngModel)]="user.pincode" />
+    </div>
+    <div>
+      <label for="remarks">remarks</label>
+      <input type="text" name="remarks" [(ngModel)]="user.remarks" />
+    </div>
+    <button class="btn btn-success" (click)="submit()">Submit</button>
+  </div>
+</div>

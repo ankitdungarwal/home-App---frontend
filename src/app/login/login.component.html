@@ -1,5 +1,16 @@
-<label>UserName</label>
-<input type="text" name="username" />
-<label>Password</label>
-<input type="password" name="password" />
-<button type="submit">Submit</button>
+<h1>Login</h1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf="isInvalid">{{ errorMessage }}</div>
+  <div>
+    <label for="username">UserName</label>
+    <input type="text" name="username" [(ngModel)]="username" />
+    <label for="password">Password</label>
+    <input type="password" name="password" [(ngModel)]="password" />
+    <input
+      type="submit"
+      name="submit"
+      class="btn btn-success"
+      (click)="checkValidation()"
+    />
+  </div>
+</div>

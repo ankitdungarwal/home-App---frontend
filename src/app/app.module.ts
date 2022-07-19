@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,11 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     FooterComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
