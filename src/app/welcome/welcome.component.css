@@ -1,0 +1,24 @@
+#top,
+#bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#top {
+  /* background-color: orange; */
+  height: 38%;
+  box-shadow: inset;
+}
+
+#bottom {
+  bottom: 0;
+  /*background-color: green; */
+  height: 62%;
+  box-shadow: 1ex;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
