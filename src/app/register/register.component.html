@@ -1,51 +1,221 @@
-<h1>Register</h1>
-<small *ngIf="errorPrompt">{{ error }}</small>
-<div class="container">
-  <div class="column">
-    <div>
-      <label for="userName">userName</label>
-      <input type="text" name="userName" [(ngModel)]="user.userName" />
+<section class="vh-100" style="background-color: #eee">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Sign up
+                </p>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example1c"
+                      class="form-control"
+                      [(ngModel)]="user.userName"
+                    />
+                    <label class="form-label" for="form3Example1c"
+                      >User Name</label
+                    >
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.firstName"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >First name</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.lastName"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >Last Name</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="date"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.dateOfBirth"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >Date of Birth</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="email"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.email"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >Your Email</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.address1"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >address1</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.address2"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >address2</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.address3"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >address3</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.pincode"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >pincode</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="text"
+                      id="form3Example3c"
+                      class="form-control"
+                      [(ngModel)]="user.remarks"
+                    />
+                    <label class="form-label" for="form3Example3c"
+                      >remarks</label
+                    >
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="password"
+                      id="form3Example4c"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example4c"
+                      >Password</label
+                    >
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <input
+                      type="password"
+                      id="form3Example4cd"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example4cd"
+                      >Repeat your password</label
+                    >
+                  </div>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form2Example3c"
+                  />
+                  <label class="form-check-label" for="form2Example3">
+                    I agree all statements in
+                    <a href="#!">Terms of service</a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg"
+                    (click)="submit()"
+                  >
+                    Register
+                  </button>
+                </div>
+              </div>
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="firstName">First name</label>
-      <input type="text" name="firstName" [(ngModel)]="user.firstName" />
-    </div>
-    <div>
-      <label for="lastName">Last Name</label>
-      <input type="text" name="lastName" [(ngModel)]="user.lastName" />
-    </div>
-    <div>
-      <label for="dateOfBirth">Date of Birth</label>
-      <input type="text" name="dateOfBirth" [(ngModel)]="user.dateOfBirth" />
-    </div>
-    <div>
-      <label for="email">email</label>
-      <input type="text" name="email" [(ngModel)]="user.email" />
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" name="password" [(ngModel)]="user.password" />
-    </div>
-    <div>
-      <label for="address1">address1</label>
-      <input type="text" name="address1" [(ngModel)]="user.address1" />
-    </div>
-    <div>
-      <label for="address2">address2</label>
-      <input type="text" name="address2" [(ngModel)]="user.address2" />
-    </div>
-    <div>
-      <label for="address3">address3</label>
-      <input type="text" name="address3" [(ngModel)]="user.address3" />
-    </div>
-    <div>
-      <label for="pincode">pincode</label>
-      <input type="text" name="pincode" [(ngModel)]="user.pincode" />
-    </div>
-    <div>
-      <label for="remarks">remarks</label>
-      <input type="text" name="remarks" [(ngModel)]="user.remarks" />
-    </div>
-    <button class="btn btn-success" (click)="submit()">Submit</button>
   </div>
-</div>
+</section>

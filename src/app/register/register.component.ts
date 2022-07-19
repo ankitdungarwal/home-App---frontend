@@ -9,8 +9,6 @@ import { HttpCallService } from '../service/http/http-call.service';
 })
 export class RegisterComponent implements OnInit {
   user = {} as Users;
-  error: string = '';
-  errorPrompt: boolean = false;
 
   constructor(private service: HttpCallService) {}
 
