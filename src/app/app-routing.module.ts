@@ -8,10 +8,20 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: '', component: LoginComponent },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+  },
   { path: 'register', component: RegisterComponent },
-  { path: 'dairy', component: DairyComponent },
-  { path: 'dairy-new/:id', component: DairyNewComponent },
+  {
+    path: 'dairy',
+    component: DairyComponent,
+  },
+  {
+    path: 'dairy-new/:id',
+    component: DairyNewComponent,
+  },
   //{ path: '**', component: PageNotFound}
 ];
 

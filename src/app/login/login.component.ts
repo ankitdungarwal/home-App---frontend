@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Users } from '../register/register.component';
 import { HttpCallService, Login } from '../service/http/http-call.service';
 
@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private authService: HttpCallService
+    private authService: HttpCallService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -28,5 +29,8 @@ export class LoginComponent implements OnInit {
     this.authService.checkLoginStatus(this.login);
     this.user = this.authService.user;
     console.log('user details got back post login ' + this.user?.firstName);
+    if (this.user != null) {
+      this.router.navigate(['/welcome']);
+    }
   }
 }

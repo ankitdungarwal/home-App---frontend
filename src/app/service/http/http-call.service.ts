@@ -10,6 +10,7 @@ import { Users } from 'src/app/register/register.component';
 export class HttpCallService {
   user: Users | undefined;
   error: string = '';
+  loginSuccess: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -48,9 +49,11 @@ export class HttpCallService {
         (data) => {
           console.log('working');
           this.user = data;
+          this.loginSuccess = true;
         },
         (error) => {
           alert('invalid Login details');
+          this.loginSuccess = false;
         }
       );
   }
