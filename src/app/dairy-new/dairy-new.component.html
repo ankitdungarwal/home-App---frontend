@@ -1,0 +1,36 @@
+<!-- <p>dairy-new works!</p>
+<div>
+  <input type="text" [(ngModel)]="dairyNew.boughtDate" />
+  <input type="text" [(ngModel)]="dairyNew.rate" />
+  <button type="submit" (click)="submit()">submit</button>
+</div> -->
+
+<div>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Rate</th>
+          <th>Purchase Date</th>
+          <th>Milk Type</th>
+          <th>Edits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" [(ngModel)]="dairyNew.rate" /></td>
+
+          <td><input type="date" [(ngModel)]="dairyNew.purchaseDate" /></td>
+
+          <td><input type="text" [(ngModel)]="dairyNew.milkType" /></td>
+        </tr>
+      </tbody>
+      <button
+        class="btn btn-success btn-lg btn-block"
+        (click)="submit(dairyNew)"
+      >
+        Create
+      </button>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Rate</th>
+          <th>Purchase Date</th>
+          <th>Updated Date</th>
+          <th>Milk Type</th>
+          <th>Edits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dairys of dairy">
+          <td>{{ dairys.rate }}</td>
+
+          <td>
+            {{ dairys.purchaseDate }}
+          </td>
+
+          <td>
+            {{ dairys.updateDate }}
+          </td>
+
+          <td>
+            {{ dairys.milkType }}
+          </td>
+          <td>
+            <button class="btn btn-warning" (click)="updateTodo(dairys.id)">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteDairy(dairys.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-success btn-lg btn-block" (click)="createNew()">
+      Create
+    </button>
+  </div>
+</div>
