@@ -34,8 +34,9 @@ export class DairyNewComponent implements OnInit {
       new Date(12 / 2 / 21),
       new Date(12 / 2 / 21),
       '',
-      MilkType.Cow
-      //new MilkMan(47, '', '', '', '', '', '')
+      MilkType.Cow,
+      //new MilkMan(47, '', '', '', '', '', ''),
+      0
     );
   }
 

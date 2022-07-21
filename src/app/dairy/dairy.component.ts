@@ -49,7 +49,8 @@ export class Dairy {
     public purchaseDate: Date,
     public updateDate: Date,
     public updatedBy: string,
-    public milkType: MilkType
+    public milkType: MilkType,
+    public amount: number
   ) {}
 }
 
