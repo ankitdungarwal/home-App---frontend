@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DairyNewComponent } from './dairy-new/dairy-new.component';
 import { DairyComponent } from './dairy/dairy.component';
+import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'dairy-new/:id',
     component: DairyNewComponent,
+  },
+  {
+    path: 'dairyCalculate',
+    component: DairyMonthlyTrackerComponent,
   },
   //{ path: '**', component: PageNotFound}
 ];
