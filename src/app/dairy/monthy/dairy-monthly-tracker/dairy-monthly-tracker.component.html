@@ -1,1 +1,69 @@
-<p>dairy-monthly-tracker works!</p>
+<div>
+  <div class="container">
+    <label>Enter Year</label>
+    <input type="text" name="year" [(ngModel)]="this.year" />
+    <label>Enter Month</label>
+    <input type="text" name="year" [(ngModel)]="this.month" />
+    <button type="submit" (click)="fetch()">fetch</button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Cow Consumed</th>
+          <th>Cow @Rate</th>
+          <th>Buffalo Consumed</th>
+          <th>Buffalo @Rate</th>
+          <th>Goat Consumed</th>
+          <th>Goat @Rate</th>
+          <th>Packet Cow Consumed</th>
+          <th>Packet Cow @Rate</th>
+          <th>Packet Buffalo Consumed</th>
+          <th>Packet Buffalo @Rate</th>
+          <!-- <th>Total consumption</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consumed of monthlyCalculation">
+          <td aria-readonly="true">{{ consumed.cowMilkConsumed }}</td>
+          <td>
+            <input type="text" name="cowRate" [(ngModel)]="this.cowRate" />
+          </td>
+          <td aria-readonly="true">{{ consumed.buffaloMilkConsumed }}</td>
+          <td>
+            <input
+              type="text"
+              name="buffaloRate"
+              [(ngModel)]="this.buffalowRate"
+            />
+          </td>
+          <td aria-readonly="true">{{ consumed.goatMilkConsumed }}</td>
+          <td>
+            <input type="text" name="goatRate" [(ngModel)]="this.goatRate" />
+          </td>
+          <td aria-readonly="true">{{ consumed.packetCowMilkConsumed }}</td>
+          <td>
+            <input
+              type="text"
+              name="packetCowRate"
+              [(ngModel)]="this.packetCowRate"
+            />
+          </td>
+          <td aria-readonly="true">{{ consumed.packetBuffaloMilkConsumed }}</td>
+          <td>
+            <input
+              type="text"
+              name="packetBuffalowRate"
+              [(ngModel)]="this.packetBuffaloRate"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="this.rateToDisplay">{{ this.total }}</p>
+    <button class="btn btn-success btn-lg btn-block" (click)="udpateRate()">
+      submit to calculate total
+    </button>
+  </div>
+  <button class="glow-on-hover" routerLink="#">Paid?</button>
+</div>
