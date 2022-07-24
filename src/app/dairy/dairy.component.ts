@@ -14,6 +14,7 @@ export class DairyComponent implements OnInit {
   constructor(private router: Router, private service: DairyHttpService) {}
 
   ngOnInit(): void {
+    this.blinkButtonOnDays();
     this.fetchAll();
   }
 
@@ -40,6 +41,13 @@ export class DairyComponent implements OnInit {
     console.log('udpate method called');
     this.router.navigate(['dairy-new', id]);
   }
+
+  blinkButtonOnDays() {
+    let date = new Date();
+    console.log('date is ' + date.getDay);
+    let day = date.getDay.toString;
+    console.log('day is ' + day);
+  }
 }
 
 export class Dairy {
@@ -61,15 +69,3 @@ export enum MilkType {
   PacketBuffalo = 'PacketBuffalo',
   PacketCow = 'PacketCow',
 }
-
-// export class MilkMan {
-//   constructor(
-//     public id: number,
-//     public name: String,
-//     public cell: String,
-//     public address: String,
-//     public referenceBy: String,
-//     public servingUsFrom: String,
-//     public servingFrom: String
-//   ) {}
-// }

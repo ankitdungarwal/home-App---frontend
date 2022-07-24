@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Dairy, DairyComponent } from 'src/app/dairy/dairy.component';
+import { MonthlyCalculation } from 'src/app/dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
 
 @Injectable({
   providedIn: 'root',
@@ -29,5 +30,25 @@ export class DairyHttpService {
 
   getById(id: number) {
     return this.http.get<Dairy>(`http://localhost:8086/dairy/${id}`);
+  }
+
+  fetchDetailsForMilkConsumed(year: number, month: number) {
+    return this.http.get<MonthlyCalculation[]>(
+      `http://localhost:8086/monthlyCalculation/yearMonth/${year}/${month}`
+    );
+  }
+
+  updateRate(
+    cowRate: number,
+    buffaloRate: number,
+    goatRate: number,
+    packetCowRate: number,
+    packetBuffaloRate: number,
+    year: number,
+    month: number
+  ) {
+    return this.http.get<MonthlyCalculation>(
+      `http://localhost:8086/monthlyCalculation/updateRateMonthYear/${cowRate}/${buffaloRate}/${goatRate}/${packetCowRate}/${packetBuffaloRate}/${year}/${month}`
+    );
   }
 }

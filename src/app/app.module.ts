@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DairyComponent } from './dairy/dairy.component';
 import { DairyNewComponent } from './dairy-new/dairy-new.component';
+import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DairyNewComponent } from './dairy-new/dairy-new.component';
     RegisterComponent,
     DairyComponent,
     DairyNewComponent,
+    DairyMonthlyTrackerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
