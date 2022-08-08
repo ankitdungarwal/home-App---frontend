@@ -29,7 +29,9 @@ export class LoginComponent implements OnInit {
     this.authService.checkLoginStatus(this.login);
     this.user = this.authService.user;
     console.log('user details got back post login ' + this.user?.firstName);
-    if (this.user != null) {
+    if (this.user === null) {
+      this.isInvalid = true;
+    } else {
       this.router.navigate(['/welcome']);
     }
   }
