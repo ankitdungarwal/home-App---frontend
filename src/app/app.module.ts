@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DairyComponent } from './dairy/dairy.component';
 import { DairyNewComponent } from './dairy-new/dairy-new.component';
 import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
+import { GuardService } from './service/guard.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-track
     DairyMonthlyTrackerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  providers: [GuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

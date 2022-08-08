@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Users } from 'src/app/register/register.component';
+import { GuardService } from '../guard.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,7 @@ export class HttpCallService {
   user: Users | undefined;
   error: string = '';
   loginSuccess: boolean = false;
+  isAdmin: string = 'false';
 
   constructor(private http: HttpClient) {}
 
@@ -50,12 +52,24 @@ export class HttpCallService {
           console.log('working');
           this.user = data;
           this.loginSuccess = true;
+          sessionStorage.setItem('authenticated', 'true');
+          console.log(
+            'is user Admin ' + this.user.isAdmin + this.user.userName
+          );
+          if (this.user.isAdmin === true) {
+            sessionStorage.setItem('isAdmin', 'true');
+          } else sessionStorage.setItem('isAdmin', 'false');
         },
         (error) => {
           alert('invalid Login details');
           this.loginSuccess = false;
         }
       );
+  }
+
+  logoutUser() {
+    sessionStorage.removeItem('authenticated');
+    sessionStorage.removeItem('isAdmin');
   }
 }
 
