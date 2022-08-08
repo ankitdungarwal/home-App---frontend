@@ -14,6 +14,7 @@ const routes: Routes = [
   {
     path: 'welcome',
     component: WelcomeComponent,
+    canActivate: [GuardService],
   },
   { path: 'register', component: RegisterComponent },
   {
@@ -24,10 +25,12 @@ const routes: Routes = [
   {
     path: 'dairy-new/:id',
     component: DairyNewComponent,
+    canActivate: [GuardService],
   },
   {
     path: 'dairyCalculate',
     component: DairyMonthlyTrackerComponent,
+    canActivate: [GuardService],
   },
   //{ path: '**', component: PageNotFound}
 ];

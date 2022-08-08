@@ -53,6 +53,9 @@ export class HttpCallService {
           this.user = data;
           this.loginSuccess = true;
           sessionStorage.setItem('authenticated', 'true');
+          console.log(
+            'is user Admin ' + this.user.isAdmin + this.user.userName
+          );
           if (this.user.isAdmin === true) {
             sessionStorage.setItem('isAdmin', 'true');
           } else sessionStorage.setItem('isAdmin', 'false');
