@@ -14,6 +14,7 @@ import { DairyComponent } from './dairy/dairy.component';
 import { DairyNewComponent } from './dairy-new/dairy-new.component';
 import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
 import { GuardService } from './service/guard.service';
+import { RecurringComponent } from './recurring/recurring.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GuardService } from './service/guard.service';
     DairyComponent,
     DairyNewComponent,
     DairyMonthlyTrackerComponent,
+    RecurringComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [GuardService],
