@@ -4,6 +4,7 @@ import { DairyNewComponent } from './dairy-new/dairy-new.component';
 import { DairyComponent } from './dairy/dairy.component';
 import { DairyMonthlyTrackerComponent } from './dairy/monthy/dairy-monthly-tracker/dairy-monthly-tracker.component';
 import { LoginComponent } from './login/login.component';
+import { RecurringComponent } from './recurring/recurring.component';
 import { RegisterComponent } from './register/register.component';
 import { GuardService } from './service/guard.service';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'dairyCalculate',
     component: DairyMonthlyTrackerComponent,
+    canActivate: [GuardService],
+  },
+  {
+    path: 'recurring',
+    component: RecurringComponent,
     canActivate: [GuardService],
   },
   //{ path: '**', component: PageNotFound}

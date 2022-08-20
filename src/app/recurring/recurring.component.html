@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="display-4">Recurring charges</h1>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Remind about</label>
+    <input type="text" [ngModel]="recur.topic" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">For</label>
+    <input type="text" [ngModel]="recur.personTargeted" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Date</label>
+    <input type="date" [ngModel]="recur.targetDate" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Remarks</label>
+    <input type="text" [ngModel]="recur.remarks" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Notes</label>
+    <input type="text" [ngModel]="recur.notes" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Nature of Reminder</label>
+    <input type="text" [ngModel]="recur.natureOfCost" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Frequency of repetition</label>
+    <input type="text" [ngModel]="recur.frequencyOfRepetition" />
+  </div>
+  <div class="input-group" *ngFor="let recur of recurring">
+    <label class="input-group-text">Extra</label>
+    <input type="text" [ngModel]="recur.col" />
+  </div>
+</div>
